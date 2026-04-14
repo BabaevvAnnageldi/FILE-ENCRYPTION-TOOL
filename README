@@ -1,0 +1,19 @@
+A secure file encryption tool built in Python that uses AES-256-GCM — the same standard used in real-world security applications. Whether you're protecting sensitive documents or just learning how encryption works under the hood, this tool has you covered.
+What makes it solid:
+
+Encrypt files using a password or a key file — your choice
+Tamper detection built in — if anyone modifies your encrypted file, decryption will fail and tell you
+Keys are generated using cryptographically secure randomness, not random()
+Deleted files are overwritten with random data (3 passes) before removal — not just sent to Trash
+Works three ways: CLI, interactive menu, or import it directly as a Python class
+
+Built with:
+Python · AES-256-GCM · PBKDF2-HMAC-SHA256 · cryptography library
+Known limitations:
+
+Loads the entire file into memory — very large files may cause slowdowns
+Secure delete currently overwrites only the first 1MB per pass
+
+
+
+Built as part of a personal cybersecurity learning journey. Follows cryptography best practices throughout.
